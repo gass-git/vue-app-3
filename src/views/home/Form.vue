@@ -8,7 +8,7 @@
         <div class="char-count">
             <strong>char count: {{ charCount }}</strong>
         </div>
-        <button v-on:click="$emit('consoleInput', textInput)">
+        <button v-on:click="$emit('submitInput', textInput)">
             submit
         </button>
     </section>    

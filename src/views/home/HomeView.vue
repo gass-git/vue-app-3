@@ -1,16 +1,19 @@
 <template>
   <div class="home">
-    <Form v-on:console-input="consoleInput" />
-    <Output />
+    <Form v-on:submit-input="submitInput" />
+    <Output v-bind:text-input="textInput"/>
   </div>
 </template>
 
 <script setup>
 import Form from './Form.vue'
 import Output from './Output.vue'
+import {ref} from 'vue'
 
-  function consoleInput(text){
-    console.log(text)
+  const textInput = ref('')
+
+  function submitInput(text){
+    textInput.value = text
   }
 </script>
 
